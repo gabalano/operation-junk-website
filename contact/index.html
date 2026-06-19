@@ -3,58 +3,69 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact | Operation Junk</title>
-    <meta name="description" content="Contact Operation Junk for junk removal in Schaumburg and Chicago suburbs.">
+    <title>Contact Operation Junk | Schaumburg & Chicago Suburbs</title>
+    <meta name="description" content="Call, text, or prepare a detailed junk removal request for Operation Junk in Schaumburg and nearby Chicago suburbs.">
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body class="oj-page">
-    <main class="oj-legal-page">
-      <section class="oj-section">
-        <div class="oj-container oj-legal">
-          <a class="oj-brand oj-legal-brand" href="/" aria-label="Operation Junk home">
-            <span class="oj-brand-mark">OJ</span>
-            <span>Operation Junk</span>
-          </a>
-          <span class="oj-section-kicker">Contact</span>
-          <h1>Contact Operation Junk</h1>
-          <p>Call or text <a href="tel:+18722225502">(872) 222-5502</a>, or send your inquiry below.</p>
+    <main class="oj-subpage">
+      <header class="oj-subnav">
+        <div class="oj-container oj-subnav-inner">
+          <a class="oj-subbrand" href="/" aria-label="Operation Junk home"><span class="oj-brand-mark">OJ</span><span>Operation Junk</span></a>
+          <div class="oj-subnav-actions"><a class="oj-subnav-link" href="/">← Back to site</a><a class="oj-subnav-phone" href="tel:+18722225502">Call/Text (872) 222-5502</a></div>
+        </div>
+      </header>
 
-          <form class="oj-contact-form" action="#" method="post">
-            <label>
-              Name
-              <input name="name" type="text" autocomplete="name" required>
-            </label>
-            <label>
-              Phone
-              <input name="phone" type="tel" autocomplete="tel" required>
-            </label>
-            <label>
-              Email
-              <input name="email" type="email" autocomplete="email">
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <p class="oj-form-disclosure">By submitting this form, you agree to receive calls and text messages from Operation Junk regarding your inquiry. Message frequency varies. Message and data rates may apply. Reply STOP to opt out.</p>
-            <button class="oj-btn oj-btn-dark" type="submit">Submit</button>
-          </form>
+      <section class="oj-subhero oj-contact-hero">
+        <div class="oj-container">
+          <span class="oj-subhero-kicker">Contact Operation Junk</span>
+          <h1>Tell us what needs to go.</h1>
+          <p>Text a photo, call for a quick conversation, or send us a few job details. We will help you choose the right next step and confirm the final price onsite before any work begins.</p>
+          <div class="oj-contact-options" aria-label="Ways to contact Operation Junk">
+            <a class="oj-contact-option" href="sms:+18722225502?&body=Hi%20Operation%20Junk%2C%20I%27d%20like%20help%20with%20junk%20removal."><span class="oj-contact-option-icon">💬</span><span><strong>Text us now</strong><small>Best for quick questions, photos, and scheduling.</small></span></a>
+            <a class="oj-contact-option" href="tel:+18722225502"><span class="oj-contact-option-icon">☎</span><span><strong>Call (872) 222-5502</strong><small>Talk through the job with us directly.</small></span></a>
+            <a class="oj-contact-option" href="#request"><span class="oj-contact-option-icon">📝</span><span><strong>Build a request</strong><small>Share the key details in about a minute.</small></span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="oj-subbody" id="request">
+        <div class="oj-container oj-contact-layout">
+          <aside class="oj-contact-panel">
+            <span class="oj-section-kicker">Reach us your way</span>
+            <h2>No portal. No pressure. Just a clear next step.</h2>
+            <p>Start with whatever feels easiest. Photos are useful, but they are never required just to begin the conversation.</p>
+            <div class="oj-contact-detail-list">
+              <div class="oj-contact-detail"><b>💬</b><div><strong>Text photos anytime</strong><span><a href="sms:+18722225502?&body=Hi%20Operation%20Junk%2C%20I%27d%20like%20help%20with%20junk%20removal.">(872) 222-5502</a></span></div></div>
+              <div class="oj-contact-detail"><b>☎</b><div><strong>Call to talk it through</strong><span><a href="tel:+18722225502">(872) 222-5502</a></span></div></div>
+              <div class="oj-contact-detail"><b>📍</b><div><strong>Service area</strong><span>Schaumburg and nearby Chicago suburbs</span></div></div>
+            </div>
+            <div class="oj-contact-callout">Final pricing is confirmed onsite before removal begins. Mention stairs, elevators, long carries, dense materials, refrigerators, tires, paint, or other special items up front.</div>
+          </aside>
+
+          <section class="oj-contact-form-panel" aria-labelledby="contact-form-title">
+            <h2 id="contact-form-title">Prepare your request</h2>
+            <p>We will turn these details into a ready-to-send text message. Attach photos in the text thread if they help explain the job.</p>
+            <form class="oj-contact-form" id="oj-contact-form" novalidate>
+              <div class="oj-contact-fields">
+                <label>First name<input name="name" autocomplete="given-name" required placeholder="Your first name"></label>
+                <label>Mobile number<input name="phone" type="tel" autocomplete="tel" required placeholder="(555) 555-5555"></label>
+                <label>ZIP code<input name="zip" inputmode="numeric" autocomplete="postal-code" required placeholder="e.g., 60173"></label>
+                <label>Preferred follow-up<select name="followUp"><option value="Text me">Text me</option><option value="Call me">Call me</option></select></label>
+              </div>
+              <label>What needs to go?<select name="jobType" required><option value="" selected disabled>Select the closest match</option><option value="Furniture or appliances">Furniture or appliances</option><option value="Garage, basement, or attic clutter">Garage, basement, or attic clutter</option><option value="Apartment or move-out items">Apartment or move-out items</option><option value="Yard or outdoor items">Yard or outdoor items</option><option value="Light remodeling debris">Light remodeling debris</option><option value="Something else">Something else</option></select></label>
+              <label>Tell us about the job<textarea name="details" required placeholder="What needs to go? Where is it located? Any stairs, elevator, long carry, appliances, tires, or other special items?"></textarea></label>
+              <p class="oj-contact-disclosure">By preparing this request, you agree to receive calls and texts from Operation Junk about your inquiry. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Consent is not a condition of purchase. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-and-conditions/">Terms &amp; Conditions</a>.</p>
+              <button class="oj-btn oj-btn-primary" type="submit">Prepare text request →</button>
+              <p class="oj-contact-status" id="oj-contact-status" aria-live="polite"></p>
+            </form>
+            <p class="oj-contact-footer-note">This opens your messaging app with the request prefilled. You control whether to send it, and you can add photos before you do.</p>
+          </section>
         </div>
       </section>
     </main>
 
-    <footer class="oj-footer">
-      <div class="oj-container oj-footer-inner">
-        <div>
-          <strong>Operation Junk</strong>
-          <span>(872) 222-5502</span>
-        </div>
-        <nav aria-label="Footer links">
-          <a href="/privacy-policy/">Privacy Policy</a>
-          <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
-          <a href="/contact/">Contact</a>
-        </nav>
-      </div>
-    </footer>
+    <footer class="oj-footer"><div class="oj-container oj-footer-inner"><div><strong>Operation Junk</strong><span>(872) 222-5502</span></div><nav aria-label="Footer links"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-and-conditions/">Terms &amp; Conditions</a><a href="/contact/">Contact</a></nav></div></footer>
+    <script src="/contact.js"></script>
   </body>
 </html>
