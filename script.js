@@ -4,6 +4,7 @@ const heroCards=[...document.querySelectorAll('.oj-path-card')];
 if(heroCards[2]){heroCards[2].dataset.preference='';heroCards[2].innerHTML='<span class="oj-path-icon">📝</span><span><strong>Tell us about the job</strong><small>Answer a few quick questions, then add photos if helpful.</small></span><b aria-hidden="true">→</b>';}
 const heroTitle=document.querySelector('.oj-card-top h2');if(heroTitle)heroTitle.textContent='Start with a few details.';
 const heroKicker=document.querySelector('.oj-card-kicker');if(heroKicker)heroKicker.textContent='Quick questionnaire';
+const heroBadge=document.querySelector('.oj-rating');if(heroBadge)heroBadge.textContent='~60 seconds';
 const heroNote=document.querySelector('.oj-card-note');if(heroNote)heroNote.textContent='A few details help us show up prepared. Photos are optional, and the final price is confirmed onsite before we lift anything.';
 
 const step4=document.querySelector('.oj-form-step[data-step="4"]');
