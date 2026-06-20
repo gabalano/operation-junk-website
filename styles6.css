@@ -25,7 +25,7 @@
   line-height:1;
 }
 
-/* Give the two oversized white headings a little more breathing room. */
+/* Give the oversized white display headings a little more breathing room. */
 .oj-hero h1{
   line-height:1.01;
   letter-spacing:-.058em;
@@ -36,9 +36,14 @@
   letter-spacing:-.05em;
 }
 
+.oj-contact-hero h1{
+  letter-spacing:-.058em;
+}
+
 @media(max-width:640px){
   .oj-logo-line .oj-brand{font-size:22px;}
   .oj-subnav .oj-subbrand{font-size:18px;}
   .oj-hero h1{line-height:1.03;letter-spacing:-.052em;}
   .oj-process-section h2{line-height:1.06;letter-spacing:-.044em;}
+  .oj-contact-hero h1{letter-spacing:-.052em;}
 }
