@@ -40,6 +40,21 @@
   letter-spacing:-.058em;
 }
 
+/* Site-wide green gradient treatment. */
+.oj-hero,
+.oj-process-section,
+.oj-final,
+.oj-subhero{
+  background:
+    radial-gradient(ellipse 62% 88% at 92% 4%, rgba(0,100,0,.82) 0%, rgba(0,100,0,.42) 34%, transparent 72%),
+    radial-gradient(ellipse 54% 68% at 5% 100%, rgba(0,100,0,.22) 0%, transparent 74%),
+    linear-gradient(135deg, #003d06 0%, #003d06 48%, #004a06 100%);
+}
+
+.oj-subnav{
+  background:#003d06;
+}
+
 @media(max-width:640px){
   .oj-logo-line .oj-brand{font-size:22px;}
   .oj-subnav .oj-subbrand{font-size:18px;}
