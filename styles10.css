@@ -1,0 +1,70 @@
+/* Services feature section and simplified final CTA — June 2026 */
+.oj-services-feature {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(248,197,66,.2), transparent 25%),
+    radial-gradient(circle at 92% 78%, rgba(0,145,24,.22), transparent 34%),
+    linear-gradient(135deg, #003f00 0%, #006400 52%, #004c07 100%);
+}
+.oj-services-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .42;
+  background-image:
+    linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+}
+.oj-services-feature > .oj-container {
+  position: relative;
+  z-index: 1;
+}
+.oj-services-feature .oj-section-kicker {
+  color: var(--oj-yellow);
+}
+.oj-services-feature .oj-section-head h2 {
+  color: #fff;
+}
+.oj-services-feature .oj-section-head p {
+  color: rgba(255,255,255,.8);
+}
+.oj-services-feature .oj-service {
+  background: rgba(255,255,255,.98);
+  border-color: rgba(255,255,255,.5);
+  box-shadow: 0 15px 30px rgba(0,0,0,.14);
+}
+.oj-services-feature .oj-service:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.2);
+}
+.oj-services-feature .oj-service-icon {
+  background: #eaf6ea;
+}
+.oj-services-feature .oj-special-items {
+  color: #596659;
+  background: rgba(255,250,240,.98);
+  border-color: rgba(248,197,66,.4);
+  box-shadow: 0 14px 28px rgba(0,0,0,.12);
+}
+.oj-services-feature .oj-special-items strong {
+  color: #503a00;
+}
+/* Pricing explainer intentionally retired from the active page. */
+.oj-process-section { display: none !important; }
+.oj-final .oj-btn-row > :not(:first-child) { display: none !important; }
+.oj-final .oj-btn-row { justify-content: center; }
+.oj-final .oj-btn-row > :first-child {
+  min-width: min(360px, 100%);
+  padding-right: 28px;
+  padding-left: 28px;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .oj-services-feature { padding-top: 70px; padding-bottom: 70px; }
+  .oj-services-feature .oj-section-head { margin-bottom: 28px; }
+  .oj-final .oj-btn-row > :first-child { width: 100%; min-width: 0; }
+}
