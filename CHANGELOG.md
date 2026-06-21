@@ -18,6 +18,20 @@ This is the business-readable record of material production changes. Code histor
 
 ---
 
+## 2026-06-21 — Conversation-first lead capture
+
+- **Change ID:** WEB-CTA-002
+- **Date live:** Pending production merge
+- **Area:** Website / Sales
+- **Status:** Planned
+- **Problem observed:** The homepage and contact page asked prospects to complete a multi-step job questionnaire, estimate load size, and view public price ranges before speaking with Operation Junk. That can create price resistance and prevents the owner from qualifying and scheduling the job live.
+- **Hypothesis:** A call-first funnel with text and callback options will increase the share of qualified conversations and onsite closes, while preserving owner control over pickup scheduling.
+- **Exact change:** Removed public load-size pricing, photo-quote promises, and active questionnaires. Replaced active CTAs with Call Now, Text Us, and Schedule a Callback. The callback flow captures only name, mobile number, city/suburb, a preferred callback day/time, and optional notes. Pickup appointments remain manually coordinated after the conversation.
+- **Primary metric:** Qualified conversations and onsite close rate per website lead.
+- **Guardrail metric:** Callback no-show rate and missed-call response time.
+- **Review date:** 2026-07-19
+- **Decision and evidence:** Pending production deployment and four weeks of lead-source, callback, booked-visit, and closed-job data.
+
 ## 2026-06-19 — Learning-system baseline
 
 - **Change ID:** OPS-001
