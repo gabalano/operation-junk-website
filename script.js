@@ -46,6 +46,11 @@
   upgradeHeaderContact();
   upgradeHeroMessage();
 
+  const pageAdjustments = document.createElement('script');
+  pageAdjustments.src = 'page-adjustments.js';
+  pageAdjustments.defer = true;
+  document.body.append(pageAdjustments);
+
   if (document.querySelector('.oj-hero-card.oj-next-step-card')) {
     const galleryScript = document.createElement('script');
     galleryScript.src = 'job-gallery.js';
