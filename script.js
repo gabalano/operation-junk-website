@@ -27,6 +27,13 @@
 
   upgradeHeaderContact();
 
+  if (document.querySelector('.oj-hero-card.oj-next-step-card')) {
+    const galleryScript = document.createElement('script');
+    galleryScript.src = 'job-gallery.js';
+    galleryScript.defer = true;
+    document.body.append(galleryScript);
+  }
+
   const modal = document.getElementById('callback-modal');
   const form = document.getElementById('oj-callback-form');
   const sendLink = document.getElementById('oj-send-callback');
