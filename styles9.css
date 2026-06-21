@@ -1,4 +1,4 @@
-/* Hero job gallery — June 2026 */
+/* Hero job gallery — photo-priority refinement, June 2026 */
 .oj-job-showcase {
   padding: 26px;
   overflow: hidden;
@@ -16,11 +16,12 @@
   letter-spacing: .14em;
 }
 .oj-job-showcase .oj-card-top h2 {
-  max-width: 345px;
+  max-width: none;
   margin: 0;
-  font-size: clamp(28px, 3.5vw, 39px);
+  font-size: clamp(27px, 3.25vw, 39px);
   line-height: .98;
   letter-spacing: -.06em;
+  white-space: nowrap;
 }
 .oj-job-index {
   display: inline-flex;
@@ -44,13 +45,12 @@
 }
 .oj-job-slides {
   position: relative;
-  min-height: 266px;
+  min-height: 302px;
 }
 .oj-job-slide {
   position: absolute;
   inset: 0;
   display: grid;
-  gap: 14px;
   opacity: 0;
   transform: translateX(14px);
   pointer-events: none;
@@ -67,7 +67,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 7px;
-  min-height: 210px;
+  min-height: 302px;
   overflow: hidden;
   background: #eef1ed;
   border-radius: 20px;
@@ -89,7 +89,7 @@
 }
 .oj-job-photo img {
   width: 100%;
-  height: 210px;
+  height: 302px;
   display: block;
   object-fit: cover;
   object-position: center;
@@ -102,8 +102,8 @@
   left: 11px;
   padding: 6px 9px;
   color: #fff;
-  background: rgba(11,18,11,.78);
-  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(11,18,11,.9);
+  border: 1px solid rgba(255,255,255,.24);
   border-radius: 999px;
   backdrop-filter: blur(8px);
   font-size: 10px;
@@ -112,34 +112,17 @@
   text-transform: uppercase;
 }
 .oj-job-photo--after figcaption {
-  color: var(--oj-green-dark);
-  background: rgba(248,197,66,.94);
-  border-color: rgba(255,255,255,.65);
-}
-.oj-job-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 42px;
-}
-.oj-job-meta strong {
-  font-size: 18px;
-  letter-spacing: -.04em;
-}
-.oj-job-meta span {
-  color: var(--oj-muted);
-  font-size: 12px;
-  font-weight: 800;
-  white-space: nowrap;
+  color: #fff;
+  background: rgba(11,18,11,.9);
+  border-color: rgba(255,255,255,.24);
 }
 .oj-job-arrow {
   position: absolute;
   z-index: 3;
-  top: 96px;
+  top: calc(50% - 18px);
   display: grid;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   place-items: center;
   color: var(--oj-green-dark);
   background: rgba(255,255,255,.94);
@@ -147,7 +130,7 @@
   border-radius: 50%;
   box-shadow: 0 6px 15px rgba(0,0,0,.18);
   cursor: pointer;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
   line-height: 1;
   transition: transform .18s ease, background .18s ease;
@@ -157,50 +140,28 @@
   background: var(--oj-green);
   transform: translateY(-2px);
 }
-.oj-job-arrow:focus-visible,
-.oj-job-dot:focus-visible {
+.oj-job-arrow:focus-visible {
   outline: 3px solid var(--oj-yellow);
   outline-offset: 3px;
 }
 .oj-job-arrow--prev { left: 9px; }
 .oj-job-arrow--next { right: 9px; }
 .oj-job-footer {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 16px;
-  margin-top: 15px;
-}
-.oj-job-dots {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.oj-job-dot {
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  background: #d4ddd4;
-  border: 0;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: width .2s ease, background .2s ease;
-}
-.oj-job-dot.is-active {
-  width: 22px;
-  background: var(--oj-green);
+  display: block;
+  margin-top: 16px;
 }
 .oj-job-cta {
-  display: inline-flex;
+  display: flex;
+  width: 100%;
+  min-height: 58px;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 12px 16px;
+  padding: 14px 18px;
   color: #fff !important;
   background: linear-gradient(135deg, #08630e, var(--oj-green-dark));
-  border-radius: 14px;
-  box-shadow: 0 8px 16px rgba(0,63,0,.18);
-  font-size: 13px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,63,0,.2);
+  font-size: 15px;
   font-weight: 950;
   line-height: 1.15;
   text-align: center;
@@ -211,16 +172,24 @@
   color: #fff !important;
   filter: brightness(1.08);
   transform: translateY(-2px);
-  box-shadow: 0 12px 20px rgba(0,63,0,.24);
+  box-shadow: 0 14px 24px rgba(0,63,0,.26);
+}
+.oj-job-cta strong {
+  margin-left: 6px;
+  color: var(--oj-yellow);
+  white-space: nowrap;
 }
 @media (max-width: 640px) {
   .oj-job-showcase { padding: 21px; }
-  .oj-job-showcase .oj-card-top h2 { max-width: 260px; font-size: 31px; }
-  .oj-job-slides { min-height: 246px; }
+  .oj-job-showcase .oj-card-top h2 { font-size: clamp(25px, 7vw, 31px); }
+  .oj-job-slides,
   .oj-job-images,
-  .oj-job-photo img { min-height: 190px; height: 190px; }
-  .oj-job-arrow { top: 82px; }
-  .oj-job-footer { grid-template-columns: 1fr; gap: 11px; }
-  .oj-job-dots { justify-content: center; }
-  .oj-job-cta { width: 100%; }
+  .oj-job-photo img { min-height: 236px; height: 236px; }
+  .oj-job-arrow { top: calc(50% - 19px); }
+  .oj-job-footer { margin-top: 13px; }
+  .oj-job-cta { min-height: 56px; padding: 12px 14px; font-size: 14px; }
+}
+@media (max-width: 390px) {
+  .oj-job-showcase .oj-card-top h2 { font-size: 24px; }
+  .oj-job-cta { font-size: 13px; }
 }
