@@ -18,6 +18,20 @@ This is the business-readable record of material production changes. Code histor
 
 ---
 
+## 2026-06-21 — Callback details and photo handoff
+
+- **Change ID:** WEB-CTA-005
+- **Date live:** Pending production deployment verification
+- **Area:** Website / Sales
+- **Status:** Planned
+- **Problem observed:** The callback request captured limited contact and location information, requiring a follow-up to obtain a full service address and customer details. Customers also had no structured way to select job photos.
+- **Hypothesis:** Capturing the full name, mobile number, full service address, callback window, notes, and optional photo context before the callback will improve qualification and reduce back-and-forth.
+- **Exact change:** Rebuilt the callback modal with first name, last name, mobile number, full service address, callback day/time, optional notes, and an optional five-photo picker with previews. The current SMS handoff cannot transmit browser-selected files automatically, so the confirmation explicitly instructs the customer to attach selected photos in the generated text message. A real stored-upload flow requires a connected storage or HighLevel upload endpoint.
+- **Primary metric:** Callback leads with complete address and useful job context.
+- **Guardrail metric:** Callback form completion rate and drop-off at the expanded form.
+- **Review date:** 2026-07-05
+- **Decision and evidence:** Pending production deployment verification and a two-week review of completed callback requests.
+
 ## 2026-06-21 — Hero job proof gallery
 
 - **Change ID:** WEB-CTA-004
