@@ -27,6 +27,22 @@
     cityPills.innerHTML = cities.map((city) => `<span>${city}</span>`).join('');
   }
 
+  const faqGrid = document.querySelector('.oj-faq-grid');
+  faqGrid?.querySelectorAll('details.oj-faq').forEach((faq) => {
+    const question = faq.querySelector('summary')?.textContent.trim();
+    const answer = faq.querySelector('p')?.textContent.trim();
+    if (!question || !answer) return;
+
+    const card = document.createElement('article');
+    card.className = 'oj-faq oj-faq-static';
+    const heading = document.createElement('h3');
+    heading.textContent = question;
+    const copy = document.createElement('p');
+    copy.textContent = answer;
+    card.append(heading, copy);
+    faq.replaceWith(card);
+  });
+
   const finalSection = document.querySelector('.oj-final');
   const finalCall = finalSection?.querySelector('a[href^="tel:"]');
   if (!finalSection || !finalCall) return;
