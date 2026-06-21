@@ -6,6 +6,27 @@
 
   document.querySelector('.oj-process-section')?.remove();
 
+  const serviceArea = document.querySelector('.oj-service-area');
+  const serviceAreaTitle = document.getElementById('area-title');
+  const serviceAreaCopy = serviceArea?.querySelector('.oj-section-head p');
+  const cityPills = serviceArea?.querySelector('.oj-city-pills');
+  const cities = [
+    'Schaumburg', 'Hoffman Estates', 'Streamwood', 'Elk Grove Village',
+    'Rolling Meadows', 'Arlington Heights', 'Palatine', 'Roselle',
+    'Hanover Park', 'Carol Stream', 'Bloomingdale', 'Bartlett',
+    'Elgin', 'South Elgin', 'Itasca', 'Wood Dale', 'Addison',
+    'Glendale Heights', 'Mount Prospect', 'Prospect Heights',
+    'Des Plaines', 'Wheeling', 'Buffalo Grove', 'Barrington',
+    'South Barrington', 'Inverness'
+  ];
+
+  if (serviceAreaTitle) serviceAreaTitle.textContent = 'Serving Schaumburg and the Northwest Suburbs.';
+  if (serviceAreaCopy) serviceAreaCopy.textContent = 'Based in Schaumburg and serving nearby Northwest-suburb communities. Call to confirm availability for locations just outside this list.';
+  if (cityPills) {
+    cityPills.setAttribute('aria-label', 'Cities served by Operation Junk');
+    cityPills.innerHTML = cities.map((city) => `<span>${city}</span>`).join('');
+  }
+
   const finalSection = document.querySelector('.oj-final');
   const finalCall = finalSection?.querySelector('a[href^="tel:"]');
   if (!finalSection || !finalCall) return;
