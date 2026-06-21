@@ -32,12 +32,12 @@
     const assurance = heroCopy?.querySelector('.oj-hero-assurance');
     if (!heroCopy || !headline || !body || !assurance) return;
 
-    document.title = 'Operation Junk | Call, Text, or Schedule a Callback';
+    document.title = 'Operation Junk | Clear Out the Junk. Keep Your Day Moving.';
     document.querySelector('meta[name="description"]')?.setAttribute(
       'content',
-      'Call, text, or schedule a callback with Operation Junk for junk removal in Schaumburg and nearby Chicago suburbs.'
+      'Clear out the junk and keep your day moving with local junk removal from Operation Junk in Schaumburg and nearby Chicago suburbs.'
     );
-    headline.textContent = 'Call, text, or schedule a callback.';
+    headline.textContent = 'Clear out the junk. Keep your day moving.';
     body.textContent = 'Talk directly with Operation Junk about furniture removal, appliances, garage cleanouts, move-outs, and bulky-item pickup. We learn about the job first, then personally coordinate the best removal time.';
     assurance.textContent = 'No obligations. You approve the price before loading.';
     heroCopy.classList.remove('oj-hero-outcome-copy');
