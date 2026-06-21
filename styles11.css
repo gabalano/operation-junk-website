@@ -1,0 +1,36 @@
+/* FAQ: always-visible answer cards — June 2026 */
+.oj-faq-grid {
+  align-items: stretch;
+}
+.oj-faq-static {
+  display: flex;
+  min-height: 170px;
+  flex-direction: column;
+}
+.oj-faq-static h3 {
+  margin: 0 0 12px;
+  color: var(--oj-black);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -.032em;
+  line-height: 1.18;
+}
+.oj-faq-static h3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 9px 2px 0;
+  border-radius: 50%;
+  background: var(--oj-green);
+}
+.oj-faq-static p {
+  margin: 0;
+  color: var(--oj-muted);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.52;
+}
+@media (max-width: 760px) {
+  .oj-faq-static { min-height: 0; }
+}
