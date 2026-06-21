@@ -18,6 +18,20 @@ This is the business-readable record of material production changes. Code histor
 
 ---
 
+## 2026-06-21 — Hero job proof gallery
+
+- **Change ID:** WEB-CTA-004
+- **Date live:** Pending production deployment verification
+- **Area:** Website / Sales
+- **Status:** Planned
+- **Problem observed:** The hero-side card repeated Call, Text, and Callback choices that were already present in the header, main hero CTA, and mobile sticky bar. It used valuable above-the-fold space without showing evidence of completed work.
+- **Hypothesis:** Replacing duplicate contact choices with an authentic before/after job gallery will increase trust and contact starts by showing proof of the type of work Operation Junk handles.
+- **Exact change:** Replaced the hero-side card at runtime with a four-slide before/after gallery using the existing site job-photo sets. The gallery headline is `WHAT WE DO` and `Our past junk removal jobs`; every slide has explicit Before and After indicators, manual arrows/dots, slow autoplay that pauses on interaction, and a `Need a job like this? Call Now` action.
+- **Primary metric:** Website-originated calls after viewing the hero gallery.
+- **Guardrail metric:** Hero load performance, image failures, and decline in call/text CTA use.
+- **Review date:** 2026-07-05
+- **Decision and evidence:** Pending production deployment verification and a two-week review of contact activity and mobile engagement.
+
 ## 2026-06-21 — Primary header contact control
 
 - **Change ID:** WEB-CTA-003
