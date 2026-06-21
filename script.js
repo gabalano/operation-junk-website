@@ -1,11 +1,33 @@
 (() => {
+  const businessPhone = '+18722225502';
+
+  const upgradeHeaderContact = () => {
+    const legacyContact = document.querySelector('.oj-logo-line > .oj-top-call');
+    if (!legacyContact) return;
+
+    const callHref = legacyContact.getAttribute('href') || `tel:${businessPhone}`;
+    const contact = document.createElement('div');
+    contact.className = 'oj-top-contact';
+    contact.setAttribute('aria-label', 'Contact Operation Junk');
+    contact.innerHTML = `
+      <a class="oj-top-call" href="${callHref}" aria-label="Call Operation Junk at (872) 222-5502">
+        <span class="oj-top-contact-icon" aria-hidden="true">☎</span>
+        <span class="oj-top-contact-copy"><small>CALL NOW</small><strong>(872) 222-5502</strong></span>
+      </a>
+      <a class="oj-top-text" href="sms:${businessPhone}?&body=Hi%20Operation%20Junk%2C%20I%27d%20like%20help%20with%20junk%20removal." aria-label="Text Operation Junk at (872) 222-5502">
+        <span aria-hidden="true">💬</span><span>TEXT</span>
+      </a>`;
+    legacyContact.replaceWith(contact);
+  };
+
+  upgradeHeaderContact();
+
   const modal = document.getElementById('callback-modal');
   const form = document.getElementById('oj-callback-form');
   const sendLink = document.getElementById('oj-send-callback');
   const formStep = document.querySelector('[data-callback-step="form"]');
   const successStep = document.querySelector('[data-callback-step="success"]');
   const dateField = form?.querySelector('input[name="callbackDate"]');
-  const phone = '+18722225502';
 
   const setMinimumDate = () => {
     if (!dateField) return;
@@ -67,7 +89,7 @@
       'Please confirm my callback time.'
     ].filter(Boolean);
 
-    if (sendLink) sendLink.href = `sms:${phone}?&body=${encodeURIComponent(lines.join('\n'))}`;
+    if (sendLink) sendLink.href = `sms:${businessPhone}?&body=${encodeURIComponent(lines.join('\n'))}`;
     formStep?.classList.remove('is-active');
     successStep?.classList.add('is-active');
   });

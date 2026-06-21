@@ -18,6 +18,20 @@ This is the business-readable record of material production changes. Code histor
 
 ---
 
+## 2026-06-21 — Primary header contact control
+
+- **Change ID:** WEB-CTA-003
+- **Date live:** Pending production deployment verification
+- **Area:** Website / Sales
+- **Status:** Planned
+- **Problem observed:** The main header contact link blended into the green hero, did not visually prioritize the phone number, and used a single telephone link for both call and text language. The header contact action was also hidden on small screens.
+- **Hypothesis:** A high-contrast split contact control with a prominent number, separate call and text actions, and a persistent mobile layout will increase direct contact starts without creating the pressure or distrust associated with flashing animations.
+- **Exact change:** Replaced the header contact label at runtime with a bright-yellow two-action contact control: a primary Call Now action displaying `(872) 222-5502` and a distinct Text action. The control is full-width and remains visible in the mobile header.
+- **Primary metric:** Website-originated calls and texts attributable to the header contact control.
+- **Guardrail metric:** Mobile layout breakage, accidental contact taps, and decline in hero CTA use.
+- **Review date:** 2026-07-05
+- **Decision and evidence:** Pending production deployment verification and a two-week review of call/text behavior.
+
 ## 2026-06-21 — Conversation-first lead capture
 
 - **Change ID:** WEB-CTA-002
