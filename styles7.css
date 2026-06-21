@@ -1,0 +1,57 @@
+/* Conversation-first CTA system — June 2026 */
+.oj-wordmark {
+  font-family: "Russo One", Impact, sans-serif;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+.oj-conversation-site .oj-brand-mark { display: none; }
+.oj-hero-assurance { color: var(--oj-yellow) !important; font-weight: 850; font-size: 17px !important; margin-top: -10px !important; }
+.oj-btn-ghost { color: #fff; background: transparent; border: 1px solid rgba(255,255,255,.42); }
+.oj-btn-ghost:hover { background: rgba(255,255,255,.12); }
+.oj-card-grid-four { grid-template-columns: repeat(4, 1fr); }
+.oj-next-step-card .oj-path-card { text-decoration: none; cursor: pointer; }
+.oj-next-step-card button.oj-path-card { font: inherit; }
+.oj-sticky-mobile-three { grid-template-columns: 1fr 1fr 1fr; }
+.oj-sticky-callback { border: 0; min-height: 48px; border-radius: 16px; color: #fff; background: rgba(255,255,255,.16); font: inherit; font-weight: 950; cursor: pointer; }
+.oj-callback-modal { width: min(650px, calc(100% - 24px)); }
+.oj-callback-modal .oj-modal-shell { position: relative; padding: 34px; background: #fff; border-radius: 26px; box-shadow: 0 20px 60px rgba(0,0,0,.28); }
+.oj-callback-modal::backdrop { background: rgba(8,16,8,.7); backdrop-filter: blur(3px); }
+.oj-callback-modal .oj-form-step { display: none; }
+.oj-callback-modal .oj-form-step.is-active { display: block; }
+.oj-callback-modal h2 { margin: 7px 0 10px; font-size: clamp(30px, 4vw, 42px); line-height: 1; letter-spacing: -.06em; }
+.oj-callback-modal p { color: var(--oj-muted); line-height: 1.5; font-weight: 600; }
+.oj-callback-fields { grid-template-columns: 1fr 1fr; }
+.oj-callback-fields label:last-child { grid-column: span 2; }
+.oj-callback-modal label { display: grid; gap: 7px; color: var(--oj-black); font-size: 13px; font-weight: 900; }
+.oj-callback-modal input, .oj-callback-modal select, .oj-callback-modal textarea { width: 100%; padding: 12px 13px; color: var(--oj-black); background: #fff; border: 1px solid var(--oj-border); border-radius: 12px; font: inherit; font-weight: 600; }
+.oj-callback-modal input:focus, .oj-callback-modal select:focus, .oj-callback-modal textarea:focus { border-color: var(--oj-green); outline: 3px solid rgba(0,100,0,.13); }
+.oj-callback-modal .oj-notes { margin-top: 16px; }
+.oj-callback-modal .oj-consent { margin: 17px 0 0; font-size: 12px; }
+.oj-callback-modal .oj-consent a { color: var(--oj-green-dark); }
+.oj-callback-modal .oj-form-nav { margin-top: 20px; }
+.oj-callback-modal .oj-success { text-align: center; padding: 22px 10px; }
+.oj-callback-modal .oj-success .oj-btn { margin-top: 15px; }
+.oj-callback-modal .oj-text-button { display: block; margin-top: 18px; color: var(--oj-green-dark); font-weight: 850; }
+.oj-callback-modal .oj-success-mark { display: grid; width: 56px; height: 56px; place-items: center; margin: 0 auto 16px; color: #fff; background: var(--oj-green); border-radius: 50%; font-size: 28px; font-weight: 950; }
+.oj-contact-conversation-layout { grid-template-columns: 1fr 1fr; }
+.oj-contact-action-panel { display: flex; flex-direction: column; justify-content: center; }
+.oj-contact-action-panel h2 { margin-top: 0; }
+.oj-contact-action-stack { display: grid; gap: 12px; margin-top: 24px; }
+.oj-btn-outline { color: var(--oj-green-dark); background: #fff; border: 1px solid rgba(0,100,0,.3); }
+.oj-btn-outline:hover { color: #fff; background: var(--oj-green); }
+.oj-contact-option { text-align: left; font: inherit; cursor: pointer; }
+.oj-contact-option span:last-child { display: block; }
+.oj-contact-option strong, .oj-contact-option small { display: block; }
+.oj-contact-option small { margin-top: 4px; color: var(--oj-muted); font-size: 13px; font-weight: 620; }
+@media (max-width: 940px) {
+  .oj-card-grid-four { grid-template-columns: repeat(2, 1fr); }
+  .oj-contact-conversation-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .oj-wordmark { font-size: 18px; letter-spacing: .02em; }
+  .oj-hero-assurance { font-size: 16px !important; }
+  .oj-card-grid-four { grid-template-columns: 1fr; }
+  .oj-callback-modal .oj-modal-shell { padding: 26px 20px; }
+  .oj-callback-fields { grid-template-columns: 1fr; }
+  .oj-callback-fields label:last-child { grid-column: auto; }
+}
