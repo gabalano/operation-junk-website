@@ -11,11 +11,16 @@
     contact.setAttribute('aria-label', 'Contact Operation Junk');
     contact.innerHTML = `
       <a class="oj-top-call" href="${callHref}" aria-label="Call Operation Junk at (872) 222-5502">
-        <span class="oj-top-contact-icon" aria-hidden="true">☎</span>
+        <span class="oj-top-contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.24 1l-2.21 2.22Z"/></svg>
+        </span>
         <span class="oj-top-contact-copy"><small>CALL NOW</small><strong>(872) 222-5502</strong></span>
       </a>
       <a class="oj-top-text" href="sms:${businessPhone}?&body=Hi%20Operation%20Junk%2C%20I%27d%20like%20help%20with%20junk%20removal." aria-label="Text Operation Junk at (872) 222-5502">
-        <span aria-hidden="true">💬</span><span>TEXT</span>
+        <span class="oj-top-text-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm2 6v2h12V9H6Zm0 4v2h8v-2H6Z"/></svg>
+        </span>
+        <span class="oj-top-text-copy"><small>PREFER TO</small><strong>TEXT US</strong></span>
       </a>`;
     legacyContact.replaceWith(contact);
   };

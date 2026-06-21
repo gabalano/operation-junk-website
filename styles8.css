@@ -1,57 +1,114 @@
-/* Primary header contact control — June 2026 */
+/* Primary header contact control — polished June 2026 */
 .oj-top-contact {
+  position: relative;
   display: inline-flex;
   align-items: stretch;
+  gap: 5px;
+  isolation: isolate;
   overflow: hidden;
+  padding: 4px;
   color: var(--oj-black);
-  background: var(--oj-yellow);
-  border: 2px solid rgba(255,255,255,.38);
+  background: linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,255,255,.08));
+  border: 1px solid rgba(255,255,255,.42);
   border-radius: 999px;
-  box-shadow: 0 14px 28px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.48);
+  box-shadow: 0 18px 38px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.36);
+  backdrop-filter: blur(12px);
+}
+.oj-top-contact::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 130px;
+  height: 130px;
+  right: 58px;
+  top: -74px;
+  border-radius: 50%;
+  background: rgba(248,197,66,.26);
+  filter: blur(18px);
 }
 .oj-top-call,
 .oj-top-text {
-  min-height: 68px;
-  color: var(--oj-black) !important;
+  min-height: 70px;
   text-decoration: none !important;
-  transition: transform .18s ease, background .18s ease, color .18s ease;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease, background .2s ease;
 }
 .oj-top-call {
+  position: relative;
   display: flex !important;
   flex: 1 1 auto;
   align-items: center;
-  gap: 11px;
-  padding: 10px 18px 10px 14px;
-  background: var(--oj-yellow);
+  gap: 12px;
+  padding: 10px 20px 10px 12px;
+  overflow: hidden;
+  color: var(--oj-black) !important;
+  background: linear-gradient(135deg, #ffefad 0%, #f8c542 52%, #eaaa05 100%);
+  border: 1px solid rgba(255,255,255,.64);
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.62), 0 5px 12px rgba(65,45,0,.17);
+}
+.oj-top-call::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 16%;
+  width: 56%;
+  height: 46%;
+  border-radius: 0 0 50% 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,.48), transparent);
+  pointer-events: none;
 }
 .oj-top-call:hover {
-  background: #ffda62;
-  transform: translateY(-1px);
+  color: var(--oj-black) !important;
+  filter: brightness(1.04) saturate(1.04);
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.72), 0 10px 18px rgba(0,0,0,.2);
 }
+.oj-top-call:active,
+.oj-top-text:active { transform: translateY(0); }
 .oj-top-contact-icon {
+  position: relative;
+  z-index: 1;
   display: grid;
-  flex: 0 0 38px;
-  width: 38px;
-  height: 38px;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
   place-items: center;
-  color: #fff;
-  background: var(--oj-green-dark);
+  color: var(--oj-yellow);
+  background: radial-gradient(circle at 35% 25%, #176a22, var(--oj-green-dark) 72%);
+  border: 2px solid rgba(255,255,255,.55);
   border-radius: 50%;
-  font-size: 19px;
-  line-height: 1;
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,.13);
+  box-shadow: 0 5px 10px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.18);
+}
+.oj-top-contact-icon svg,
+.oj-top-text-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 .oj-top-contact-copy {
+  position: relative;
+  z-index: 1;
   display: grid;
-  gap: 2px;
+  gap: 3px;
   line-height: 1;
 }
 .oj-top-contact-copy small {
-  color: rgba(16,20,16,.74);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(16,20,16,.72);
   font-size: 10px;
   font-weight: 1000;
-  letter-spacing: .11em;
+  letter-spacing: .14em;
   line-height: 1;
+}
+.oj-top-contact-copy small::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--oj-green);
+  box-shadow: 0 0 0 3px rgba(0,100,0,.14);
 }
 .oj-top-contact-copy strong {
   color: var(--oj-black);
@@ -62,31 +119,59 @@
   white-space: nowrap;
 }
 .oj-top-text {
-  display: grid;
-  min-width: 82px;
-  place-items: center;
-  gap: 3px;
-  padding: 8px 13px;
-  border-left: 2px solid rgba(16,20,16,.2);
-  background: #fff7d8;
-  font-size: 12px;
-  font-weight: 1000;
-  letter-spacing: .065em;
-  text-align: center;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 112px;
+  padding: 10px 15px;
+  color: #fff !important;
+  background: linear-gradient(145deg, #075b0d, #003f00);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 4px 10px rgba(0,0,0,.16);
 }
 .oj-top-text:hover {
   color: #fff !important;
-  background: var(--oj-green-dark);
+  background: linear-gradient(145deg, #0c7415, #004d07);
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 10px 18px rgba(0,0,0,.22);
 }
-.oj-top-text span:first-child {
-  font-size: 17px;
+.oj-top-text-icon {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  color: var(--oj-black);
+  background: var(--oj-yellow);
+  border-radius: 9px;
+  transform: rotate(-4deg);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.48);
+}
+.oj-top-text-copy {
+  display: grid;
+  gap: 2px;
   line-height: 1;
+  text-align: left;
+}
+.oj-top-text-copy small {
+  color: rgba(255,255,255,.63);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+.oj-top-text-copy strong {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 1000;
+  letter-spacing: .055em;
 }
 .oj-top-call:focus-visible,
 .oj-top-text:focus-visible {
   position: relative;
   z-index: 1;
-  outline: 4px solid #fff;
+  outline: 3px solid #fff;
   outline-offset: -5px;
 }
 @media (max-width: 640px) {
@@ -98,19 +183,34 @@
   }
   .oj-top-contact {
     width: 100%;
-    border-radius: 18px;
+    border-radius: 22px;
   }
   .oj-top-call,
   .oj-top-text {
-    min-height: 62px;
+    min-height: 64px;
   }
   .oj-top-call {
-    padding: 10px 13px;
+    min-width: 0;
+    padding: 10px 11px;
+  }
+  .oj-top-contact-icon {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
   }
   .oj-top-contact-copy strong {
-    font-size: clamp(19px, 6vw, 23px);
+    font-size: clamp(18px, 5.6vw, 23px);
   }
   .oj-top-text {
-    min-width: 78px;
+    min-width: 102px;
+    padding: 8px 10px;
   }
+  .oj-top-text-copy small { display: none; }
+}
+@media (max-width: 390px) {
+  .oj-top-contact-copy small { font-size: 8px; }
+  .oj-top-contact-copy strong { font-size: 18px; }
+  .oj-top-text { min-width: 88px; gap: 5px; }
+  .oj-top-text-copy strong { font-size: 11px; }
+  .oj-top-text-icon { width: 25px; height: 25px; }
 }
