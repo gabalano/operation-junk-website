@@ -25,7 +25,26 @@
     legacyContact.replaceWith(contact);
   };
 
+  const upgradeHeroMessage = () => {
+    const heroCopy = document.querySelector('.oj-hero-copy');
+    const headline = document.getElementById('hero-title');
+    const body = heroCopy?.querySelector('p:not(.oj-hero-assurance)');
+    const assurance = heroCopy?.querySelector('.oj-hero-assurance');
+    if (!heroCopy || !headline || !body || !assurance) return;
+
+    document.title = 'Operation Junk | Clear the Clutter. Get Your Space Back.';
+    document.querySelector('meta[name="description"]')?.setAttribute(
+      'content',
+      'Clear the clutter and get your space back with local junk removal from Operation Junk in Schaumburg and nearby Chicago suburbs.'
+    );
+    headline.textContent = 'Clear the clutter. Get your space back.';
+    body.textContent = 'One quick conversation is all it takes. Tell us what needs to go, and we’ll personally coordinate the right removal time—then handle every bit of the heavy lifting.';
+    assurance.textContent = 'No surprise pricing. Nothing moves until you approve the total.';
+    heroCopy.classList.add('oj-hero-outcome-copy');
+  };
+
   upgradeHeaderContact();
+  upgradeHeroMessage();
 
   if (document.querySelector('.oj-hero-card.oj-next-step-card')) {
     const galleryScript = document.createElement('script');
