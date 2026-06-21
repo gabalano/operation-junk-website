@@ -1,6 +1,8 @@
 (() => {
   const servicesSection = document.querySelector('section[aria-labelledby="services-title"]');
   servicesSection?.classList.add('oj-services-feature');
+  const servicesKicker = servicesSection?.querySelector('.oj-section-kicker');
+  if (servicesKicker) servicesKicker.textContent = 'What we take';
 
   document.querySelector('.oj-process-section')?.remove();
 
