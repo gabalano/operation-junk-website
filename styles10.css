@@ -3,7 +3,10 @@
   position: relative;
   overflow: hidden;
   color: #fff;
-  background: radial-gradient(circle at 92% 0%, rgba(248,197,66,.28), transparent 30%), linear-gradient(135deg, var(--oj-green-dark), var(--oj-green));
+  /* Explicit section palette: #003d06 base with a #006400 glow. */
+  background:
+    radial-gradient(900px 620px at 92% 0%, #006400 0%, rgba(0,100,0,0) 70%),
+    #003d06;
 }
 .oj-services-feature::before {
   content: "";
