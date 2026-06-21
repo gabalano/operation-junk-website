@@ -102,7 +102,7 @@
   left: 11px;
   padding: 6px 9px;
   color: #fff;
-  background: rgba(11,18,11,.9);
+  background: #101410;
   border: 1px solid rgba(255,255,255,.24);
   border-radius: 999px;
   backdrop-filter: blur(8px);
@@ -113,7 +113,7 @@
 }
 .oj-job-photo--after figcaption {
   color: #fff;
-  background: rgba(11,18,11,.9);
+  background: #101410;
   border-color: rgba(255,255,255,.24);
 }
 .oj-job-arrow {
