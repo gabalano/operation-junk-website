@@ -3,19 +3,16 @@
   position: relative;
   overflow: hidden;
   color: #fff;
-  background:
-    radial-gradient(circle at 8% 18%, rgba(248,197,66,.2), transparent 25%),
-    radial-gradient(circle at 92% 78%, rgba(0,145,24,.22), transparent 34%),
-    linear-gradient(135deg, #003f00 0%, #006400 52%, #004c07 100%);
+  background: radial-gradient(circle at 92% 0%, rgba(248,197,66,.28), transparent 30%), linear-gradient(135deg, var(--oj-green-dark), var(--oj-green));
 }
 .oj-services-feature::before {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: .42;
+  opacity: .55;
   background-image:
-    linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
   background-size: 44px 44px;
   pointer-events: none;
 }
@@ -33,9 +30,16 @@
   color: rgba(255,255,255,.8);
 }
 .oj-services-feature .oj-service {
+  color: var(--oj-black);
   background: rgba(255,255,255,.98);
   border-color: rgba(255,255,255,.5);
   box-shadow: 0 15px 30px rgba(0,0,0,.14);
+}
+.oj-services-feature .oj-service h3 {
+  color: var(--oj-black);
+}
+.oj-services-feature .oj-service p {
+  color: var(--oj-muted);
 }
 .oj-services-feature .oj-service:hover {
   transform: translateY(-3px);
