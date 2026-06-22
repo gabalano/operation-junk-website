@@ -39,8 +39,8 @@
 .oj-proof-item:nth-child(2) strong::after { content: "Tell us what needs to go"; }
 .oj-proof-item:nth-child(2) span::after { content: "A few quick details help us plan."; }
 
-.oj-proof-item:nth-child(3) strong::after { content: "We coordinate a time that works"; }
-.oj-proof-item:nth-child(3) span::after { content: "We confirm the best removal window with you."; }
+.oj-proof-item:nth-child(3) strong::after { content: "Pick a time that works"; }
+.oj-proof-item:nth-child(3) span::after { content: "We’ll confirm your removal window."; }
 
 .oj-proof-item:nth-child(4) strong::after { content: "You approve the price first"; }
 .oj-proof-item:nth-child(4) span::after { content: "Nothing moves until you say yes."; }
