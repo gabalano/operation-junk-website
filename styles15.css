@@ -1,0 +1,4 @@
+/* Removes the duplicate call CTA from the past-pickups gallery. */
+.oj-job-showcase .oj-job-footer {
+  display: none;
+}
