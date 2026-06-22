@@ -1,0 +1,10 @@
+/* Footer spacing: compact on desktop, clear of the mobile contact bar on small screens. */
+.oj-footer {
+  padding: 26px 0 28px;
+}
+
+@media (max-width: 760px) {
+  .oj-footer {
+    padding-bottom: 84px;
+  }
+}
