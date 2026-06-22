@@ -8,7 +8,7 @@
 }
 
 .oj-section#how-it-works .oj-section-kicker::after {
-  content: "WHAT HAPPENS NEXT";
+  content: "HOW IT WORKS";
   display: inline-block;
   color: var(--oj-green);
   font-size: 12px;
@@ -22,7 +22,7 @@
   display: block;
   color: var(--oj-black);
   font-size: clamp(35px, 4.5vw, 58px);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -.065em;
   line-height: .98;
 }
@@ -40,7 +40,7 @@
   display: block;
   color: var(--oj-black);
   font-size: 23px;
-  font-weight: 900;
+  font-weight: 750;
   letter-spacing: -.045em;
   line-height: 1.06;
 }
