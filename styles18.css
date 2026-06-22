@@ -1,0 +1,7 @@
+/* Restore the original heading treatment beneath the updated How It Works copy. */
+.oj-section#how-it-works .oj-section-head h2::after,
+.oj-section#how-it-works .oj-card h3::after {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+}
