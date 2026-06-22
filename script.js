@@ -1,7 +1,5 @@
 (() => {
   const businessPhone = '+18722225502';
-  const maxPhotoCount = 5;
-  const maxPhotoBytes = 8 * 1024 * 1024;
 
   const upgradeHeaderContact = () => {
     const legacyContact = document.querySelector('.oj-logo-line > .oj-top-call');
@@ -13,15 +11,11 @@
     contact.setAttribute('aria-label', 'Contact Operation Junk');
     contact.innerHTML = `
       <a class="oj-top-call" href="${callHref}" aria-label="Call Operation Junk at (872) 222-5502">
-        <span class="oj-top-contact-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" focusable="false"><path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.24 1l-2.21 2.22Z"/></svg>
-        </span>
+        <span class="oj-top-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.24 1l-2.21 2.22Z"/></svg></span>
         <span class="oj-top-contact-copy"><small>CALL NOW</small><strong>(872) 222-5502</strong></span>
       </a>
       <a class="oj-top-text" href="sms:${businessPhone}?&body=Hi%20Operation%20Junk%2C%20I%27d%20like%20help%20with%20junk%20removal." aria-label="Text Operation Junk at (872) 222-5502">
-        <span class="oj-top-text-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" focusable="false"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm2 6v2h12V9H6Zm0 4v2h8v-2H6Z"/></svg>
-        </span>
+        <span class="oj-top-text-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm2 6v2h12V9H6Zm0 4v2h8v-2H6Z"/></svg></span>
         <span class="oj-top-text-copy"><small>PREFER TO</small><strong>TEXT US</strong></span>
       </a>`;
     legacyContact.replaceWith(contact);
@@ -64,68 +58,14 @@
           <label>Preferred time window<select name="callbackTime" required><option value="" selected disabled>Select a time</option><option>9:00–10:00 AM</option><option>10:00–11:00 AM</option><option>11:00 AM–12:00 PM</option><option>12:00–1:00 PM</option><option>1:00–2:00 PM</option><option>2:00–3:00 PM</option><option>3:00–4:00 PM</option><option>4:00–5:00 PM</option><option>5:00–6:00 PM</option></select></label>
         </div>
         <label class="oj-notes">Anything helpful to know? <textarea name="notes" rows="3" placeholder="Optional: a few items, any stairs, or a question you want answered."></textarea></label>
-        <label class="oj-photo-picker" for="callback-photos">
-          <input id="callback-photos" name="photos" type="file" accept="image/*" multiple data-photo-input>
-          <span class="oj-photo-picker-icon" aria-hidden="true">▣</span>
-          <span class="oj-photo-picker-copy"><strong>Add photos (optional)</strong><small>Choose up to 5 photos of the items, access, or space.</small></span>
-          <span class="oj-photo-picker-action">Choose photos</span>
-        </label>
-        <p class="oj-photo-summary" data-photo-summary aria-live="polite"></p>
-        <div class="oj-photo-preview-grid" data-photo-preview-grid aria-live="polite"></div>
-        <p class="oj-photo-handoff-note"><strong>Photo note:</strong> After your callback text opens, attach the same selected photos in that message before sending.</p>
         <p class="oj-consent">By requesting a callback, you agree to receive calls and text messages from Operation Junk about your inquiry. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Consent is not a condition of purchase. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-and-conditions/">Terms &amp; Conditions</a>.</p>
         <div class="oj-form-nav"><span></span><button class="oj-btn oj-btn-primary" type="submit">Prepare Callback Request →</button></div>
       </section>
       <section class="oj-form-step oj-success" data-callback-step="success" aria-live="polite">
         <div class="oj-success-mark">✓</div><span class="oj-form-kicker">One last tap</span><h2>Open the text message to send your callback request.</h2><p>Your contact details, address, and preferred callback time are included. We will confirm the next step personally.</p>
-        <p class="oj-photo-sms-note" data-photo-sms-note>If you selected photos, attach those same photos in the text message before sending it.</p>
         <a id="oj-send-callback" class="oj-btn oj-btn-primary" href="sms:${businessPhone}">Send Callback Request by Text →</a>
         <a class="oj-text-button" href="tel:${businessPhone}">Rather talk now? Call us</a>
       </section>`;
-  };
-
-  const getPhotoError = (photos) => {
-    if (photos.length > maxPhotoCount) return `Please choose no more than ${maxPhotoCount} photos.`;
-    if (photos.some((photo) => !photo.type.startsWith('image/'))) return 'Please choose image files only.';
-    if (photos.some((photo) => photo.size > maxPhotoBytes)) return 'Each photo must be 8 MB or smaller.';
-    return '';
-  };
-
-  const renderPhotoPreview = (input) => {
-    const form = input.closest('form');
-    const summary = form?.querySelector('[data-photo-summary]');
-    const grid = form?.querySelector('[data-photo-preview-grid]');
-    if (!summary || !grid) return;
-
-    const photos = [...input.files];
-    const error = getPhotoError(photos);
-    grid.innerHTML = '';
-    grid.classList.remove('is-visible');
-    summary.classList.remove('is-visible');
-
-    if (error) {
-      summary.textContent = error;
-      summary.classList.add('is-visible');
-      return;
-    }
-    if (!photos.length) return;
-
-    summary.textContent = `${photos.length} photo${photos.length === 1 ? '' : 's'} selected. Attach ${photos.length === 1 ? 'it' : 'them'} in the callback text after it opens.`;
-    summary.classList.add('is-visible');
-    photos.forEach((photo, index) => {
-      const item = document.createElement('div');
-      item.className = 'oj-photo-preview';
-      const image = document.createElement('img');
-      const source = URL.createObjectURL(photo);
-      image.src = source;
-      image.alt = `Selected photo ${index + 1}`;
-      image.onload = () => URL.revokeObjectURL(source);
-      const number = document.createElement('span');
-      number.textContent = String(index + 1);
-      item.append(image, number);
-      grid.append(item);
-    });
-    grid.classList.add('is-visible');
   };
 
   upgradeHeaderContact();
@@ -150,8 +90,6 @@
   const formStep = document.querySelector('[data-callback-step="form"]');
   const successStep = document.querySelector('[data-callback-step="success"]');
   const dateField = form?.querySelector('input[name="callbackDate"]');
-  const photoInput = form?.querySelector('[data-photo-input]');
-  const photoSmsNote = form?.querySelector('[data-photo-sms-note]');
 
   const setMinimumDate = () => {
     if (!dateField) return;
@@ -191,22 +129,12 @@
     if (event.target === modal) closeCallback();
   });
 
-  photoInput?.addEventListener('change', () => renderPhotoPreview(photoInput));
-
   form?.addEventListener('submit', (event) => {
     event.preventDefault();
     const required = [...form.querySelectorAll('[required]')];
     const incomplete = required.find((field) => !String(field.value || '').trim());
     if (incomplete) {
       incomplete.focus();
-      return;
-    }
-
-    const photos = photoInput ? [...photoInput.files] : [];
-    const photoError = getPhotoError(photos);
-    if (photoError) {
-      renderPhotoPreview(photoInput);
-      photoInput?.focus();
       return;
     }
 
@@ -219,13 +147,11 @@
       `Address: ${data.get('address')}`,
       `Preferred callback: ${data.get('callbackDate')} · ${data.get('callbackTime')}`,
       data.get('notes') ? `Notes: ${data.get('notes')}` : '',
-      photos.length ? `Photos selected: ${photos.length}. I will attach ${photos.length === 1 ? 'it' : 'them'} in this text before sending.` : '',
       '',
       'Please confirm my callback time.'
     ].filter(Boolean);
 
     if (sendLink) sendLink.href = `sms:${businessPhone}?&body=${encodeURIComponent(lines.join('\n'))}`;
-    photoSmsNote?.classList.toggle('is-visible', photos.length > 0);
     formStep?.classList.remove('is-active');
     successStep?.classList.add('is-active');
   });
