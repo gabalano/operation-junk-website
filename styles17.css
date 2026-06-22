@@ -1,0 +1,70 @@
+/* Customer-first How It Works copy. */
+.oj-section#how-it-works .oj-section-kicker,
+.oj-section#how-it-works .oj-section-head h2,
+.oj-section#how-it-works .oj-section-head > p,
+.oj-section#how-it-works .oj-card h3,
+.oj-section#how-it-works .oj-card p {
+  font-size: 0;
+}
+
+.oj-section#how-it-works .oj-section-kicker::after {
+  content: "WHAT HAPPENS NEXT";
+  display: inline-block;
+  color: var(--oj-green);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: .075em;
+  line-height: 1;
+}
+
+.oj-section#how-it-works .oj-section-head h2::after {
+  content: "Getting rid of junk should be easy.";
+  display: block;
+  color: var(--oj-black);
+  font-size: clamp(35px, 4.5vw, 58px);
+  font-weight: 900;
+  letter-spacing: -.065em;
+  line-height: .98;
+}
+
+.oj-section#how-it-works .oj-section-head > p::after {
+  content: "Reach out when it works for you. We’ll learn about the job, coordinate the visit, and give you the exact price before anything moves.";
+  display: block;
+  color: var(--oj-muted);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.oj-section#how-it-works .oj-card h3::after {
+  display: block;
+  color: var(--oj-black);
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: -.045em;
+  line-height: 1.06;
+}
+
+.oj-section#how-it-works .oj-card p::after {
+  display: block;
+  color: var(--oj-muted);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.oj-section#how-it-works .oj-card:nth-child(1) h3::after { content: "Reach out your way"; }
+.oj-section#how-it-works .oj-card:nth-child(1) p::after { content: "Call, text, or request a callback."; }
+
+.oj-section#how-it-works .oj-card:nth-child(2) h3::after { content: "Tell us what needs to go"; }
+.oj-section#how-it-works .oj-card:nth-child(2) p::after { content: "A few details about the items and access help us plan."; }
+
+.oj-section#how-it-works .oj-card:nth-child(3) h3::after { content: "We work around your schedule"; }
+.oj-section#how-it-works .oj-card:nth-child(3) p::after { content: "We’ll confirm a removal window that fits."; }
+
+.oj-section#how-it-works .oj-card:nth-child(4) h3::after { content: "You approve before we start"; }
+.oj-section#how-it-works .oj-card:nth-child(4) p::after { content: "You get the exact price onsite—no surprises."; }
+
+@media (max-width: 760px) {
+  .oj-section#how-it-works .oj-card p::after { font-size: 15px; }
+}
