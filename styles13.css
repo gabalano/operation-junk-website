@@ -1,35 +1,11 @@
-/* Callback details and optional photo handoff — June 2026 */
+/* Expanded callback details — June 2026 */
 .oj-callback-modal { width: min(880px, calc(100% - 24px)); }
-.oj-callback-modal .oj-modal-shell { max-height: min(910px, calc(100dvh - 24px)); overflow-y: auto; }
+.oj-callback-modal .oj-modal-shell { max-height: min(860px, calc(100dvh - 24px)); overflow-y: auto; }
 .oj-callback-fields { grid-template-columns: 1fr 1fr; }
 .oj-callback-fields label { grid-column: auto !important; }
 .oj-callback-fields .oj-field--full { grid-column: 1 / -1 !important; }
-.oj-photo-picker { display: grid; grid-template-columns: 48px 1fr auto; align-items: center; gap: 14px; margin-top: 17px; padding: 15px 16px; color: var(--oj-black); background: #f7fbf7; border: 1px dashed rgba(0,100,0,.38); border-radius: 16px; cursor: pointer; }
-.oj-photo-picker:hover { background: #f1f8f1; border-color: var(--oj-green); }
-.oj-photo-picker:focus-within { outline: 3px solid rgba(248,197,66,.7); outline-offset: 3px; }
-.oj-photo-picker input { position: absolute; width: 1px !important; height: 1px !important; overflow: hidden; opacity: 0; pointer-events: none; }
-.oj-photo-picker-icon { display: grid; width: 48px; height: 48px; place-items: center; color: var(--oj-green-dark); background: var(--oj-green-soft); border-radius: 14px; font-size: 21px; }
-.oj-photo-picker-copy { display: grid; gap: 4px; }
-.oj-photo-picker-copy strong { font-size: 15px; letter-spacing: -.018em; }
-.oj-photo-picker-copy small { color: var(--oj-muted); font-size: 12px; font-weight: 650; line-height: 1.35; }
-.oj-photo-picker-action { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; padding: 9px 12px; color: var(--oj-green-dark); background: #fff; border: 1px solid rgba(0,100,0,.2); border-radius: 10px; font-size: 12px; font-weight: 900; white-space: nowrap; }
-.oj-photo-summary { display: none; margin: 10px 0 0; color: var(--oj-green-dark); font-size: 13px; font-weight: 800; }
-.oj-photo-summary.is-visible { display: block; }
-.oj-photo-preview-grid { display: none; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 12px; }
-.oj-photo-preview-grid.is-visible { display: grid; }
-.oj-photo-preview { position: relative; aspect-ratio: 1; overflow: hidden; background: var(--oj-green-soft); border: 1px solid rgba(0,100,0,.14); border-radius: 11px; }
-.oj-photo-preview img { width: 100%; height: 100%; display: block; object-fit: cover; }
-.oj-photo-preview span { position: absolute; right: 5px; bottom: 5px; display: grid; width: 20px; height: 20px; place-items: center; color: #fff; background: rgba(16,20,16,.78); border-radius: 50%; font-size: 10px; font-weight: 900; }
-.oj-photo-handoff-note { margin: 12px 0 0; color: #667266; font-size: 12px; font-weight: 650; line-height: 1.45; }
-.oj-photo-handoff-note strong { color: var(--oj-green-dark); }
-.oj-callback-modal .oj-success .oj-photo-sms-note { display: none; max-width: 500px; margin: 12px auto 0; color: var(--oj-green-dark); background: var(--oj-green-soft); border: 1px solid rgba(0,100,0,.12); border-radius: 13px; padding: 12px 14px; font-size: 13px; font-weight: 750; line-height: 1.45; }
-.oj-callback-modal .oj-success .oj-photo-sms-note.is-visible { display: block; }
 @media (max-width: 640px) {
   .oj-callback-modal .oj-modal-shell { padding: 24px 18px; }
   .oj-callback-fields { grid-template-columns: 1fr; }
   .oj-callback-fields .oj-field--full { grid-column: auto !important; }
-  .oj-photo-picker { grid-template-columns: 42px 1fr; padding: 13px; }
-  .oj-photo-picker-icon { width: 42px; height: 42px; }
-  .oj-photo-picker-action { display: none; }
-  .oj-photo-preview-grid { grid-template-columns: repeat(4, 1fr); }
 }
