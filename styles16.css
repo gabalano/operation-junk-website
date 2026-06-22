@@ -1,0 +1,51 @@
+/* Customer-first proof-strip messaging. */
+.oj-proof-item:nth-child(1) strong,
+.oj-proof-item:nth-child(2) strong,
+.oj-proof-item:nth-child(3) strong,
+.oj-proof-item:nth-child(4) strong,
+.oj-proof-item:nth-child(1) span,
+.oj-proof-item:nth-child(2) span,
+.oj-proof-item:nth-child(3) span,
+.oj-proof-item:nth-child(4) span {
+  font-size: 0;
+}
+
+.oj-proof-item:nth-child(1) strong::after,
+.oj-proof-item:nth-child(2) strong::after,
+.oj-proof-item:nth-child(3) strong::after,
+.oj-proof-item:nth-child(4) strong::after {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -.025em;
+  line-height: 1.2;
+}
+
+.oj-proof-item:nth-child(1) span::after,
+.oj-proof-item:nth-child(2) span::after,
+.oj-proof-item:nth-child(3) span::after,
+.oj-proof-item:nth-child(4) span::after {
+  display: block;
+  color: rgba(255,255,255,.67);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.oj-proof-item:nth-child(1) strong::after { content: "Tell us how we can help"; }
+.oj-proof-item:nth-child(1) span::after { content: "Call, text, or request a callback."; }
+
+.oj-proof-item:nth-child(2) strong::after { content: "Tell us what needs to go"; }
+.oj-proof-item:nth-child(2) span::after { content: "A few quick details help us plan."; }
+
+.oj-proof-item:nth-child(3) strong::after { content: "We coordinate a time that works"; }
+.oj-proof-item:nth-child(3) span::after { content: "We confirm the best removal window with you."; }
+
+.oj-proof-item:nth-child(4) strong::after { content: "You approve the price first"; }
+.oj-proof-item:nth-child(4) span::after { content: "Nothing moves until you say yes."; }
+
+@media (max-width: 760px) {
+  .oj-proof-item:nth-child(n) strong::after { font-size: 15px; }
+  .oj-proof-item:nth-child(n) span::after { font-size: 12px; }
+}
